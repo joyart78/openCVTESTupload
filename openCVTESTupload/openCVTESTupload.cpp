@@ -1,6 +1,4 @@
-﻿// openCVTESTupload.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
+﻿
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -12,6 +10,7 @@ Mat src_gray;
 int thresh = 100;
 RNG rng(12345);
 void thresh_callback(int, void*);
+
 int main(int argc, char** argv)
 {
     CommandLineParser parser(argc, argv, "{@input | C:\\Users\\User\\Desktop\\каринки\\2gPgSl2poFQ.jpg | input image}");
@@ -33,6 +32,7 @@ int main(int argc, char** argv)
     waitKey();
     return 0;
 }
+
 void thresh_callback(int, void*)
 {
     Mat canny_output;
